@@ -17,10 +17,10 @@ if __name__ == '__main__':
     #j = 1 # 파일 번호 카운터
     while True:
         try:
-            hwp_link = \
+            pdf_link = \
                 [i.get_attribute("href") for i in driver.find_elements(By.CSS_SELECTOR,'div.fileList > ul > li > a') if ".pdf" in i.text][0]
-            #filename = f'R23{j}.pdf'
-            driver.get(hwp_link)
+
+            driver.get(pdf_link)
             if driver.page_source == '<html><head></head><body></body></html>':
                 driver.back()
             else:

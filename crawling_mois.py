@@ -14,7 +14,7 @@ if __name__ == '__main__':
     # get the first article
     driver.find_element(By.CSS_SELECTOR,
         '#print_area > div.table_wrap.type_01 > form > table > tbody > tr:nth-child(1) > td.l > div > a').click()\
-    #j = 1 # 파일 번호 카운터
+
     while True:
         try:
             pdf_link = \

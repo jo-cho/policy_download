@@ -8,9 +8,12 @@ def prev_article():
 
 
 if __name__ == '__main__':
-    chromedriver = chromedriver_autoinstaller.install()
     driver = webdriver.Chrome()
-    driver.get("https://www.motie.go.kr/motie/ne/presse/press2/bbs/bbsView.do?bbs_seq_n=157571&bbs_cd_n=81")
+    driver.get("https://www.motie.go.kr/motie/ne/presse/press2/bbs/bbsList.do?bbs_cd_n=81")
+
+    # get the first article
+    driver.find_element(By.CSS_SELECTOR,
+        '#content > article.body > div.common_list > table > tbody > tr:nth-child(1) > td.al > div > a').click()\
 
     # get the first article
     # driver.find_elements(By.CSS_SELECTOR,

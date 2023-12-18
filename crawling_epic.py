@@ -20,7 +20,7 @@ if __name__ == '__main__':
         try:
             pdf_link = \
                 [i.get_attribute("href") for i in driver.find_elements(By.CSS_SELECTOR,
-                                                                       'div.view_top.downbtn_org > div.bot > div.downbtn_line > div.download_wrap > div.file_bubble > ul.con > li > a') if ".pdf" in i.text][0]
+                                                                       'div.view_top.downbtn_org > div.bot > div.downbtn_line > div.download_wrap > div.file_bubble > ul.con > li > a')][0]
             driver.get(pdf_link)
 
             if driver.page_source == '<html><head></head><body></body></html>':

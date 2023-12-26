@@ -1,9 +1,10 @@
 from selenium import webdriver
 from selenium.common.exceptions import UnexpectedAlertPresentException
 from selenium.webdriver.support.ui import WebDriverWait
+import os, shutil
 
-num_start = 246167 #오늘꺼 시작
-num_end = 246187 #오늘꺼 마지막
+num_start = 246301 #오늘꺼 시작
+num_end = 246340 #오늘꺼 마지막
 
 def every_downloads_chrome(driver):
     if not driver.current_url.startswith("chrome://downloads"):
@@ -23,6 +24,12 @@ if __name__ == '__main__':
             link = f"https://eiec.kdi.re.kr/policy/callDownload.do?num={n}&filenum=1"
             driver.get(link)
             driver.implicitly_wait(5)
+            #filepath = "C:/Users/master/Downloads/"
+           # filename = max([filepath + f for f in os.listdir(filepath)], key=os.path.getctime)
+           # if filename.endswith('.pdf'):
+         #       shutil.move(src=os.path.join(filepath, filename), dst=filepath+f'{n}.pdf')
+            else:
+                pass
         except UnexpectedAlertPresentException:
             pass
     paths = WebDriverWait(driver, 150, 1).until(every_downloads_chrome)

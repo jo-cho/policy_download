@@ -2,8 +2,10 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 import pandas as pd
 
-num_start = 245419	 # 시작
-num_end = 246695 # 마지막
+num_start = 246696 # 시작
+num_end = 247723 # 마지막
+
+month = '2401' #yymm
 
 if __name__ == '__main__':
     driver = webdriver.Chrome()
@@ -15,18 +17,18 @@ if __name__ == '__main__':
             driver.get(link)
             # 제목 찾기
             title = driver.find_element(By.CSS_SELECTOR,
-                f'#ui_contents > div.page_conts-bar.economy_multi > div.view_comm_style > div.view_top.downbtn_org > strong').text
+                '#ui_contents > div.page_conts-bar.economy_multi > div.view_comm_style > div.view_top.downbtn_org > strong').text
             # 날짜 찾기
             date = driver.find_element(By.CSS_SELECTOR,
-                f'#ui_contents > div.page_conts-bar.economy_multi > div.view_comm_style > div.view_top.downbtn_org > div > div.downbtn_line > span:nth-child(1)').text
+                '#ui_contents > div.page_conts-bar.economy_multi > div.view_comm_style > div.view_top.downbtn_org > div > div.downbtn_line > span:nth-child(1)').text
             # 부처 찾기
             deprt = driver.find_element(By.CSS_SELECTOR,
-                f'#ui_contents > div.page_conts-bar.economy_multi > div.view_comm_style > div.view_top.downbtn_org > div > span').text
+                '#ui_contents > div.page_conts-bar.economy_multi > div.view_comm_style > div.view_top.downbtn_org > div > span').text
             # 초록 찾기
             summ = driver.find_element(By.CSS_SELECTOR,
-                f'#ui_contents > div.page_conts-bar.economy_multi > div.view_comm_style > div.view_body > div').text
+                '#ui_contents > div.page_conts-bar.economy_multi > div.view_comm_style > div.view_body > div').text
 
-            df0 = pd.DataFrame({"제목":title,"날짜":date,"발간처":deprt,"요약":summ}, index=[n])
+            df0 = pd.DataFrame({"자료명":title,"발간일":date,"발간처":deprt,"요약":summ}, index=[n])
             df_list.append(df0)
 
         except Exception:
@@ -36,4 +38,4 @@ if __name__ == '__main__':
     df = pd.concat(df_list, axis=0)
 
     print(df)
-    df.to_excel(f"C:/Users/master/Downloads/epic_metadata_2312.xlsx")
+    df.to_excel(f"data/epic_metadata_{month}.xlsx")

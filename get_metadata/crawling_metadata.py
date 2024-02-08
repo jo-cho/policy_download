@@ -38,4 +38,4 @@ if __name__ == '__main__':
     df = pd.concat(df_list, axis=0)
 
     print(df)
-    df.to_excel(f"data/epic_metadata_{month}.xlsx")
+    df.to_excel(f"data/epic_metadata_{month}.xlsx", engine='xlsxwriter')

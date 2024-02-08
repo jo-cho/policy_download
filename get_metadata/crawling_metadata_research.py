@@ -2,10 +2,10 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 import pandas as pd
 
-num_start = 180486 # 시작
-num_end = 181520 # 마지막
+num_start = 179623 # 시작
+num_end = 180485 # 마지막
 
-month = '2401' #yymm
+month = '2312' #yymm
 
 if __name__ == '__main__':
     driver = webdriver.Chrome()
@@ -37,4 +37,4 @@ if __name__ == '__main__':
             continue
 
     df = pd.concat(df_list, axis=0)
-    df.to_excel(f"data/research_metadata_{month}.xlsx")
+    df.to_excel(f"data/research_metadata_{month}.xlsx", engine='xlsxwriter')

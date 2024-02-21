@@ -1,6 +1,5 @@
 from pdfminer.high_level import extract_text
 import os
-import re  # 정규 표현식 모듈 추가
 
 pdf_path = "pdf/"
 output_path = "C:/Users/master/Documents/GitHub/policy_download/get_summarization/text_extracted/"

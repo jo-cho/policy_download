@@ -2,14 +2,16 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 import pandas as pd
 
-num_start = 178336 # 시작
-num_end = 178961 # 마지막
+num_start = 177780 # 시작
+num_end = 178335 # 마지막
 
-month = '2310' #yymm
+nums = num_end-num_start+1
+
+month = '2309' #yymm
 
 if __name__ == '__main__':
     driver = webdriver.Chrome()
-
+    count=0
 
     df_list = []
     for n in range(num_start, num_end + 1):
@@ -31,10 +33,14 @@ if __name__ == '__main__':
 
             df0 = pd.DataFrame({"자료명":title,"발간일":date,"발간처":deprt,"요약":summ}, index=[n])
             df_list.append(df0)
-
+            count += 1
+            if count % 10 == 0:
+                print(f"현재 {count}개/{nums}개 자료 크롤링 완료 -- {round(100*count/nums,2)}%")
         except Exception:
             print(f"{link} - 주소 없음")
             continue
 
     df = pd.concat(df_list, axis=0)
+    print(f"총 {len(df)}개 자료 크롤링 완료")
+    # print(df)
     df.to_excel(f"data/research_metadata_{month}.xlsx", engine='xlsxwriter')

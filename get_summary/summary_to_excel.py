@@ -5,9 +5,9 @@ from datetime import datetime
 text_folder_path = "C:/Users/master/Downloads/epic_today/text_tokenized/"
 text_file_list = os.listdir(text_folder_path)
 
-def summarize(input_text):
-    output = input_text[:1000]
-    return output
+# Chat API 예제
+
+############
 
 text_data = []
 summary_data = []

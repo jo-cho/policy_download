@@ -14,7 +14,6 @@
 
 
 ### 자동 요약 (in progress)
-- 정부 보도자료 PDF 다운로드
 - PDF 텍스트 추출
 - PDF 텍스트 토큰화(tokenize)
 - 요약 후 엑셀 다운로드

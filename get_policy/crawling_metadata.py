@@ -2,12 +2,12 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 import pandas as pd
 
-num_start = 259062 # 시작 번호
-num_end = 260420 # 마지막 번호
+num_start = 260421 # 시작 번호
+num_end =  260430 #261941 # 마지막 번호
 
 nums = num_end-num_start+1
 
-month = '2411' #yymm
+month = '2412' #yymm
 
 if __name__ == '__main__':
     driver = webdriver.Chrome()

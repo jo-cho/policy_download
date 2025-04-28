@@ -1,4 +1,5 @@
 **KDI 경제정보센터 데이터 크롤링**
+**KDI EIEC(Economic Information and Education Center) Data Web Crawling**
 
 ---------------
 
@@ -18,3 +19,22 @@
 - PDF 텍스트 토큰화(tokenize)
 - 요약 후 엑셀 다운로드
 - *요약 모델(ex. gpt4) 미탑재*
+
+
+-------------
+
+### Data Crawling (ver1)
+- Collection of economic policy documents (ID, title, publisher, date, content summary) [(파일 바로가기)](https://github.com/jo-cho/policy_download/blob/main/get_policy/crawling_metadata.py)
+- Collection of domestic and international research papers (ID, title, publisher, date, content summary) [(파일 바로가기)](https://github.com/jo-cho/policy_download/blob/main/get_policy/crawling_metadata_research.py)
+
+### Data Crawling and Raw PDF Download (ver2)
+- Collection of economic policy documents (ID, title, publisher, date, number of pages, file names 1–5, download links 1–5) [(파일 바로가기)](https://github.com/jo-cho/policy_download/blob/main/get_policy/crawling_pdf_metadata.py)
+  - Raw document PDF and HWP files available for download
+- Collection of domestic and international research papers (ID, title, publisher, date, number of pages, file names 1–5, download links 1–5) [(파일 바로가기)](https://github.com/jo-cho/policy_download/blob/main/get_policy/crawling_pdf_research.py)
+
+### Automatic Summarization (in progress)
+- PDF text extraction
+- PDF text tokenization
+- Summarization and Excel file download
+- *Summarization models (e.g., GPT-4 API) not yet integrated*
+

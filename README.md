@@ -24,13 +24,13 @@
 -------------
 
 ### Data Crawling (ver1)
-- Collection of economic policy documents (ID, title, publisher, date, content summary) [(파일 바로가기)](https://github.com/jo-cho/policy_download/blob/main/get_policy/crawling_metadata.py)
-- Collection of domestic and international research papers (ID, title, publisher, date, content summary) [(파일 바로가기)](https://github.com/jo-cho/policy_download/blob/main/get_policy/crawling_metadata_research.py)
+- Collection of economic policy documents (ID, title, publisher, date, content summary) [(link to code)](https://github.com/jo-cho/policy_download/blob/main/get_policy/crawling_metadata.py)
+- Collection of domestic and international research papers (ID, title, publisher, date, content summary) [(link to code)](https://github.com/jo-cho/policy_download/blob/main/get_policy/crawling_metadata_research.py)
 
 ### Data Crawling and Raw PDF Download (ver2)
-- Collection of economic policy documents (ID, title, publisher, date, number of pages, file names 1–5, download links 1–5) [(파일 바로가기)](https://github.com/jo-cho/policy_download/blob/main/get_policy/crawling_pdf_metadata.py)
+- Collection of economic policy documents (ID, title, publisher, date, number of pages, file names 1–5, download links 1–5) [(link to code)](https://github.com/jo-cho/policy_download/blob/main/get_policy/crawling_pdf_metadata.py)
   - Raw document PDF and HWP files available for download
-- Collection of domestic and international research papers (ID, title, publisher, date, number of pages, file names 1–5, download links 1–5) [(파일 바로가기)](https://github.com/jo-cho/policy_download/blob/main/get_policy/crawling_pdf_research.py)
+- Collection of domestic and international research papers (ID, title, publisher, date, number of pages, file names 1–5, download links 1–5) [(link to code)](https://github.com/jo-cho/policy_download/blob/main/get_policy/crawling_pdf_research.py)
 
 ### Automatic Summarization (in progress)
 - PDF text extraction

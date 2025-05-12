@@ -4,6 +4,7 @@
 - (KDI EIEC) Collection of Korean economic policy documents (ID, title, publisher, date, content summary) [(link to code)](https://github.com/jo-cho/policy_download/blob/main/get_policy/crawling_metadata.py)
 - (KDI EIEC) Collection of Korean and international research papers (ID, title, publisher, date, content summary) [(link to code)](https://github.com/jo-cho/policy_download/blob/main/get_policy/crawling_metadata_research.py)
 - Collection of U.S. Department of the Treasury Press Releases (ID, title, category, date, content) [(link to code)](https://github.com/jo-cho/policy_download/blob/main/get_policy/crawling_metadata_us.py)
+- Collection of Ministere de L'Economie des Finances Presse (ID, title, category, date, content) [(link to code)](https://github.com/jo-cho/policy_download/blob/main/get_policy/crawling_metadata_us.py)
   
 ### Data Crawling and Raw PDF Download (ver2)
 - KDI EIEC Collection of economic policy documents (ID, title, publisher, date, number of pages, file names 1–5, download links 1–5) [(link to code)](https://github.com/jo-cho/policy_download/blob/main/get_policy/crawling_pdf_metadata.py)
